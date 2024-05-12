@@ -1,0 +1,167 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Textiles Harmony S.A.M.</title>
+	<link href="../../img/logo2.jpg" rel="icon" type="image/x-icon">
+</head>
+
+<body style="background-color:royalblue">
+	
+<h1 align="center" style="color: lemonchiffon">Formulario de Venta</h1>
+<table width="1016" border="0" align="center" style="background-color:lightsteelblue">
+  <tbody>
+    <tr>
+      <td width="100%" height="100%" colspan="4">
+	    <form id="form1" name="form1" method="post" action="../../php/datos.php">
+        <fieldset>
+          <legend></legend>
+            <table width="100%" height="100%" border="0">
+              <tbody>
+                <tr>
+                  <td width="315" rowspan="3"><fieldset>
+                    <legend style="font-size: 20pt"><strong>Datos Cliente</strong></legend>
+                    <p>
+                      <label for="nombre2">Nombres:<br>
+                      </label>
+                      <input type="text" name="nombre" id="nombre2" size="40" placeholder="Nombre y Apellido" required pattern="^[a-zA-ZÀ-ÖØ-öø-ÿ\s']+$" title="Ingresa un nombre válido. Solo se permiten letras, espacios y apóstrofos. No se permiten números ni caracteres especiales.">
+                    </p>
+                    <p>
+                      <label for="ced">Cedula </label>
+                      <label for="textfield3">:<br>
+                      </label>
+                      <input type="text" name="cedula" size = "30" minlength="10" id="textfield3" required pattern="[0-9]{10}" title="Ingresa una cédula válida de 10 dígitos" placeholder="Cédula">
+                      <label for="ced"><br>
+                      </label>
+                    </p>
+                    <p>
+                      <label for="email">Email:<br>
+                      </label>
+                      <input type="email" name="correo" id="email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" title="Ingresa un correo electrónico válido" size="40" placeholder="admin@...com">
+              </p>
+                    <p>
+                      <label for="textfield">Dirección:<br>
+                      </label>
+                      <input type="text" name="direccion" id="textfield" required pattern="[a-zA-Z0-9\s.,-]+" title="Ingresa una dirección válida. Puede contener letras, números, espacios, comas, puntos y guiones." size="40" placeholder="Dirección domiciliaria">
+                    </p>
+                    <p>Número contacto
+                      <label for="textfield2">:<br>
+                      </label>
+                      <input type="text" name="numero" id="textfield2" required pattern="[\d()+\s-]{10,}" title="Ingresa un número de teléfono válido" size="40" placeholder = "Número celular">
+                    </p>
+                    <p>&nbsp;</p>
+                    <p>&nbsp; </p>
+                  </fieldset></td>
+                  <td width="47">&nbsp;</td>
+                  <td width="302" rowspan="3"><fieldset>
+                    <legend style="font-size: 20pt"><strong>Datos Producto</strong></legend>
+                    <p>&nbsp;</p>
+                    <p>
+                      <label for="select">Tipo de tela
+                        :<br>
+                      </label>
+                      <select name="telas" id="select" required>
+                        <option value="algodón">Algodón</option>
+                        <option value="seda">Seda</option>
+                        <option value="lana">Lana</option>
+                        <option value="acrílico">Acrílico</option>
+                      </select>
+                    </p>
+                    <p>
+                      <label for="select2">Color:</label>
+                      </p>
+                    <p>
+                      <select name="colores" id="select2" required>
+                        <option value="azul">Azul</option>
+                        <option value="rojo">Rojo</option>
+                        <option value="verde">Verde</option>
+                        <option value="amarillo">Amarillo</option>
+                      </select>
+                    </p>
+                    <p>
+                      <label for="select3">Producto:<br>
+                      </label>
+                      <select name="productos" id="select3" required>
+                        <option value="cortina">Cortina</option>
+                        <option value="cojines">Cojines</option>
+                        <option value="toallas">Toallas</option>
+                        <option value="tapiz">Tapicería</option>
+                      </select>
+                    </p>
+                    <p>
+                      <label for="number">Cantidad:<br>
+                      </label>
+                      <input type="number" name="cantidad" id="number" size="30" min="1" max="5" placeholder="1" required>
+                    </p>
+                    <p>
+                      <label for="textfield4">Precio:<br>
+                        <input type="text" name="precio" id="textfield4" required pattern="^\d+(\.\d{1,2})?$" title="Ingresa un precio válido con dos decimales" size="30" placeholder="Precio con dos decimales">
+                        <br>
+                        <br>
+                      </label>
+                    </p>
+                  </fieldset></td>
+                  <td width="43">&nbsp;</td>
+                  <td width="272" rowspan="3">
+				    <fieldset>
+                    <legend style="font-size: 20pt"><strong>Datos Venta</strong></legend>
+                    <p>
+                      <label for="number2">Número de Venta:<br>
+                      </label>
+                      <input type="number" name="venta" id="number2" size="30" placeholder="1" required min="1"> 
+                    </p>
+                    <p>
+                      <label for="textfield5">Código:<br>
+                      </label>
+                      <input type="text" name="codigo" id="textfield5" size = "30" required>
+                  </p>
+                    <p>
+                      <label for="datetime">Fecha y Hora (YYYY-MM-DD HH:mm):<br>
+                      </label>
+                      <input type="datetime" name="datetime" id="datetime" pattern="\d{4}-\d{2}-\d{2} \d{2}:\d{2}" title="Ingrese una fecha y hora válida en el formato YYYY-MM-DD HH:mm" size="30"required>
+                    </p>
+                    <p>
+                      <label for="select4">Tipo de Pago:</label>
+                    </p>
+                    <p>
+                      <select name="pago" id="select4" required>
+                        <option value="efectivo">Efectivo</option>
+                        <option value="tarjeta ">En línea</option>
+                      </select>
+                    </p>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+		          </fieldset></td>
+                </tr>
+                <tr>
+                  <td>&nbsp;</td>
+                  <td width="43">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td height="340">&nbsp;</td>
+                  <td width="43">&nbsp;</td>
+                </tr>
+              </tbody>
+            </table>
+        </fieldset>
+        <p>
+            <input type="submit" name="submit" id="submit" value="Enviar">
+            <input type="reset" name="reset" id="reset" value="Restablecer">
+        </p>
+      </form></td>
+    </tr>
+    <tr>
+      <td height="100%" colspan="4"><form id="form2" name="form2" method="post">
+          <p>Botón para eliminar todo el registro:</p>
+          <p>
+            <input type="submit" value="Eliminar Todo" formaction="../../php/eliminar.php">
+          </p>
+      </form></td>
+    </tr>
+  </tbody>	
+</table>
+<p>&nbsp;</p>
+</body>
+</html>
